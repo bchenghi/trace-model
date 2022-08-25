@@ -2,8 +2,6 @@ package microbat.model.variable;
 
 public class LocalVar extends Variable{
 	private static final long serialVersionUID = 8801623623453887555L;
-	//	private String variableName;
-//	private String type;
 	private int lineNumber;
 	private String locationClass;
 	private int byteCodeIndex;
