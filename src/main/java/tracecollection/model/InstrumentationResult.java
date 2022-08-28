@@ -35,10 +35,10 @@ public class InstrumentationResult {
     }
 
     public boolean hasThrownException() {
-        return programMsg.startsWith("fail") && !programMsg.contains("expected:");
+        return programMsg.startsWith("false") && !programMsg.contains("expected:");
     }
 
     public boolean hasSucceeded() {
-        return programMsg.startsWith("pass");
+        return programMsg.startsWith("true");
     }
 }
