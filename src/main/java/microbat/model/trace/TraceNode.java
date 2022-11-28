@@ -78,6 +78,7 @@ public class TraceNode {
     private long timestamp;
 
     private String bytecode;
+    private String invokingMethod = "";
 
     private transient double sliceBreakerProbability = 0;
     private HashSet<TraceNode> allControlDominatees;
@@ -1006,6 +1007,14 @@ public class TraceNode {
         this.bytecode = bytecode;
     }
 
+    public String getInvokingMethod() {
+        return this.invokingMethod;
+    }
+
+    public void setInvokingMethod(final String invokingMethod) {
+        this.invokingMethod = invokingMethod;
+    }
+
     class CatchClauseFinder extends ASTVisitor {
         int line;
         CompilationUnit cu;
@@ -1029,5 +1038,4 @@ public class TraceNode {
             return false;
         }
     }
-
 }
